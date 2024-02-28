@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./gitvshub.html">Git vs Github</a>
+        <a class="active" href="./commands.html">Git Commands</a>
+    </div>
+    <div style="color: white;">
+        <div style=" margin:auto; width: 800px; font-size: 18px;">
+            <h1 style="margin-left: 180px;">Git and Github commands</h1>
+        </div>
+        <div class="commands">
+            <table class="commandtable" border="solid lightgrey">
+                <tr>
+                    <th style="padding-left:35px;padding-right: 35px ;">COMMANDS</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+                <tr>
+                    <td>git --version</td>
+                    <td>To check the version of the git.
+                        <br><br>
+                        <img class="image_command" src="./Images/version.jpg" alt="version">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git init</td>
+                    <td> To initialse the git into the particular folder, so that git can keep track of the activities being done in the folder.
+                        Once the Git is initialsed, the files will be in Untracked status represented with a [U] symbol.
+                        <br><br>
+                        <img src="./Images/init.jpg" alt="init" class="image_command">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git add filename</td>
+                    <td>This command will change the status of the file from Untracked to Changes to be commited stage(Basically the Index is added)
+                        [U -> A]
+                        <br><br>
+                        <img src="./Images/add filename.jpg" alt="add filename" class="image_command">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git add .</td>
+                    <td>To add all the untracked or Modified files to stagging area for commit
+                    <br><br>
+                    <img src="./Images/add all.jpg" alt="add all" class="image_command">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git status</td>
+                    <td>With this command, we can see the status of the file whether the file is in Untracked, Modified or In Stagging area ready to be committed/pushed
+                    <br><br>
+                    <img src="./Images/Status.jpg" alt="status" class="image_command">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git commit -m 'relatable message'</td>
+                    <td>To commit the changes, which are stagged area. 
+                        [Note: In the message, give a message in such a way that you can understand afterwards what you've done in that commit part]
+                        <h4>If you're doing the commit for the first time, then you will get an error stating - 'Please tell me who you are'</h4>
+                        <p>To resolve this error, run the below commands - </p>
+                        <ol>
+                            <li>git config --global user.email "xyz@example.com"</li>
+                            <li>git config --global user.name "xyz"</li>
+                        </ol>
+                        <p>If you want to see/edit the config, run the below command - </p>
+                        <ol><li>git config --global --edit</li></ol>
+                        <br><br>
+                        <img src="./Images/Commit.jpg" alt="commit" class="image_command">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git log</td>
+                    <td>This command is used to see the tracked versions of the code after committing the changes.
+                        It will also give the commit id, which is useful to backtrack the code.
+                        <br><br>
+                        <img src="./Images/log.jpg" alt="log" class="image_command">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git reset --hard commit_id</td>
+                    <td>If in case, you did some mistake and unable to figure out what is the mistake, so with the help of this command we can go back 
+                        to the previous version of the code.
+                        [Note : --hard means it will remove the complete code part and then the head will point to the commit id]
+                    </td>
+                </tr>
+                <tr>
+                    <td>git reset --soft commit_id</td>
+                    <td>If in case, you did some mistake and unable to figure out what is the mistake, so with the help of this command we can go back 
+                        to the previous version of the code.
+                        [Note : --soft means the code part will be there and head will point to the commit id version]
+                        <br><br>
+                        <img src="./Images/soft reset.jpg" alt="soft reset" class="image_command">
+                    </td>
+                </tr>
+            </table>   
+        </div> 
+        <br>
+        <div style=" margin:auto; width: 800px; font-size: 18px;">
+            <h4 style="margin-left: 180px;">Let's learn about the commands to connect the code with the Github</h4>
+        </div>
+        <div class="commands">
+            <table class="commandtable" border="solid lightgrey">
+                <tr>
+                    <th style="padding-left:35px;padding-right: 35px ;">COMMANDS</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+                <tr>
+                    <td>git remote add origin https://github.com/Yogita725/vcs.git</td>
+                    <td>To provide origin to the code, and to understand where the code needs to be pushed.</td>
+                </tr>
+                <tr>
+                    <td>git branch -M main</td>
+                    <td>This command will create a branch</td>
+                </tr>
+                <tr>
+                    <td>git push -u origin main</td>
+                    <td>Pushing the code into that origin
+                        <br><br>
+                        <img src="./Images/github.jpg" alt="github" class="image_command">
+                    </td>
+                </tr>
+                <tr>
+                    <td>git pull</td>
+                    <td>If in the new dir, we have clone the code and in that in the main code area 
+                        some other code got pushed, so to pull all the changes first, this command is used.
+                        This will help us to work on the updated code.
+                    </td>
+                </tr>
+                <tr>
+                    <td>git branch</td>
+                    <td>This command will show all the branches currently presentincluding main</td>
+                </tr>
+                <tr>
+                    <td>git branch branchname</td>
+                    <td>This command will help to create a new branch</td>
+                </tr>
+                <tr>
+                    <td>git checkout branchname</td>
+                    <td>To change the branch, suppose you want to change the current branch to test branch and perform some testing in that branch</td>
+                </tr>
+                <tr>
+                    <td>git merge branchname</td>
+                    <td>If the code testing is done in some other branch and you want to merge that code into the main branch.
+                        So, just checkout from the main and give this merge command and mention branch name, from which we want to merge the code.
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
